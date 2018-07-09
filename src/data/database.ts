@@ -86,7 +86,6 @@ export class Database {
     }, error => {
       alert("Errorr " + error);
     });
-
   }
 
   async deletarMedicamento(id: number) {
@@ -94,7 +93,7 @@ export class Database {
       ` DELETE FROM medicamento WHERE id = ${id} `;
     const situacao = await this.db.executeSql(sql, {id});
     if (situacao.error) {
-      console.log('Erro ao excluir um medicamento, erro -> ', error);
+      console.log('Erro ao excluir um medicamento, erro -> ', situacao.error);
       return false;
     }
     console.log('Medicamento removido com sucesso')
