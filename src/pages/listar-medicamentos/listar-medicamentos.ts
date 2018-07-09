@@ -19,7 +19,7 @@ import { TipoFiltragem } from '../../model/tipoFiltragem';
 })
 
 export class ListarMedicamentosPage {
-
+  pageTitle: string = 'Lista de Medicamentos';
   medicamentos: Medicamento[];
   tipoFiltragem: TipoFiltragem = TipoFiltragem.tfNaoVencidos;
 
@@ -40,11 +40,14 @@ export class ListarMedicamentosPage {
   delegateTipoFiltragem() {
     switch (this.tipoFiltragem) {
       case TipoFiltragem.tfTodos:
+        this.pageTitle = 'Todos os Medicamentos';
         return this.database.buscarTodosMedicamentos();
       case TipoFiltragem.tfVencidos:
-        return this.database.buscarTodosMedicamentosVencidos();
+        this.pageTitle = 'Vencidos';
+      return this.database.buscarTodosMedicamentosVencidos();
       default:
-        return this.database.buscarTodosMedicamentosNaoVencidos();
+        this.pageTitle = 'Não Vencidos';
+      return this.database.buscarTodosMedicamentosNaoVencidos();
     }
   }
 

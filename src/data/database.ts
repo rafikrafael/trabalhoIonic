@@ -86,6 +86,7 @@ export class Database {
     }, error => {
       alert("Errorr " + error);
     });
+
   }
 
   async deletarMedicamento(id: number) {
