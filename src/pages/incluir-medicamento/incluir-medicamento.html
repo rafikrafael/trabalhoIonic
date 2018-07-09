@@ -1,0 +1,34 @@
+<!--
+  Generated template for the IncluirMedicamentoPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Incluir / Alterar Medicamentos</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+      <ion-item>
+        <ion-label floating="">Nome</ion-label>
+        <ion-input type="text" [(ngModel)]="medicamento.nome"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label floating="">Data Vencimento</ion-label>
+        <ion-input type="date" [(ngModel)]="medicamento.dataVencimento"></ion-input>
+      </ion-item>
+    </ion-list>
+
+  <button ion-button full round (click)="salvarMedicamento()">
+    Cadastrar Medicamento</button>
+  <button ion-button full round (click)="cancelarVoltar()">
+        Cancelar e Voltar</button>
+
+</ion-content>

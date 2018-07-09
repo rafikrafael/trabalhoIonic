@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Minha Farmacinha
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <button ion-button full round (click) ="incluirMedicamento()">
+            Incluir Medicamento</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <button ion-button full round color="dark" (click) ="listarMedicamentosNaoVencidos()">
+            Listar Medicamento Não Vencidos</button>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+        <ion-col>
+          <button ion-button full round color="danger" (click) ="listarMedicamentosVencidos()">
+              Listar Medicamento Vencidos</button>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+          <ion-col>
+            <button ion-button full round color="secondary" (click) ="listarMedicamentos()">
+                Listar Medicamento Todos</button>
+          </ion-col>
+        </ion-row>
+        </ion-grid>
+</ion-content>
